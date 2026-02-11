@@ -10,7 +10,6 @@ import {
   Wallet,
   User,
   Bell,
-  LogOut,
 } from "lucide-react";
 
 
