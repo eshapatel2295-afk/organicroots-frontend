@@ -5,7 +5,7 @@ import { useNavigate, Link } from "react-router-dom";
 import API_BASE_URL from "../config";
 
 const CartPage = () => {
-  const { cart, addToCart, removeFromCart, updateQuantity } = useCart();
+  const { cart, removeFromCart, updateQuantity } = useCart();
   const navigate = useNavigate();
 
   if (!cart || cart.items.length === 0) {
@@ -23,11 +23,12 @@ const CartPage = () => {
   }
 
   const getImageUrl = (img) => {
-  if (!img) return "/placeholder.png"; // fallback image
-  return img.startsWith("http") ? img : `${API_BASE_URL.replace("/api", "")}/${img}`;
-};
+    if (!img) return "/placeholder.png";
+    return img.startsWith("http")
+      ? img
+      : `${API_BASE_URL.replace("/api", "")}/${img}`;
+  };
 
-  // Handle quantity change
   const handleQuantityChange = (productId, newQty) => {
     if (newQty <= 0) {
       removeFromCart(productId);
@@ -36,7 +37,6 @@ const CartPage = () => {
     }
   };
 
-  // Calculate total price
   const totalPrice = cart.items.reduce(
     (total, item) => total + item.product.price * item.quantity,
     0
@@ -47,7 +47,6 @@ const CartPage = () => {
       <h2 className="fw-bold mb-4">🛒 Your Cart</h2>
 
       <div className="row">
-        {/* Cart Items */}
         <div className="col-lg-8">
           {cart.items.map((item) => (
             <div
@@ -101,7 +100,6 @@ const CartPage = () => {
           ))}
         </div>
 
-        {/* Order Summary */}
         <div className="col-lg-4">
           <div className="bg-white shadow-sm rounded-4 p-4">
             <h4 className="fw-bold mb-3">Order Summary</h4>
@@ -118,13 +116,9 @@ const CartPage = () => {
               <span>Total:</span>
               <span>₹{totalPrice.toFixed(2)}</span>
             </div>
-            <Link
-              to="/checkout"
-              className="btn btn-success w-100 mt-3"
-            >
+            <Link to="/checkout" className="btn btn-success w-100 mt-3">
               Proceed to Checkout
             </Link>
-
           </div>
         </div>
       </div>
