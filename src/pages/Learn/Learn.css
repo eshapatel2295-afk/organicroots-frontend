@@ -1,0 +1,155 @@
+.learn-details-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #2f3e46;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #2e7d32;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.back-button:hover {
+  color: #1b5e20;
+}
+
+.learn-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.learn-thumbnail {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-bottom: 2px solid #dcedc8;
+}
+
+.learn-content {
+  padding: 35px 45px;
+}
+
+.learn-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1b4332;
+  margin-bottom: 10px;
+}
+
+.learn-description {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.learn-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.badge {
+  padding: 8px 14px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Medium Green */
+.badge-green {
+  background: #43a047;  /* medium fresh green */
+}
+
+/* Medium Blue */
+.badge-blue {
+  background: #1e88e5;  /* medium soft blue */
+}
+
+/* Medium Yellow (Amber) */
+.badge-yellow {
+  background: #fbc02d;  /* medium yellow, not too bright */
+}
+
+
+.learn-fullcontent h2,
+.learn-steps h2,
+.learn-tags h2,
+.learn-resources h2,
+.learn-video h2 {
+  font-size: 1.4rem;
+  color: #1b4332;
+  border-left: 5px solid #81c784;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  margin-top: 35px;
+}
+
+.learn-fullcontent p {
+  line-height: 1.7;
+  color: #444;
+}
+
+.learn-steps ol {
+  margin-left: 20px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.learn-tags .tag {
+  display: inline-block;
+  background: #f1f8e9;
+  color: #33691e;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin: 5px 5px 0 0;
+}
+
+.learn-resources ul {
+  list-style-type: none;
+  padding: 0;
+}
+.learn-resources li {
+  margin-bottom: 8px;
+}
+.learn-resources a {
+  text-decoration: none;
+  color: #2e7d32;
+  font-weight: 500;
+}
+.learn-resources a:hover {
+  text-decoration: underline;
+}
+
+.learn-video .video-link {
+  display: inline-block;
+  color: #1565c0;
+  background: #e3f2fd;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.learn-video .video-link:hover {
+  background: #bbdefb;
+}
+
+.loader,
+.error {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 1.2rem;
+  color: #444;
+}
+.error {
+  color: #b71c1c;
+}

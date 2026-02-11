@@ -1,0 +1,201 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.hero-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Custom styles for Bootstrap */
+:root {
+  --bs-success: #16a34a;
+  /* A slightly darker green */
+  --bs-success-rgb: 22, 163, 74;
+}
+
+.btn-success {
+  --bs-btn-bg: var(--bs-success);
+  --bs-btn-border-color: var(--bs-success);
+  --bs-btn-hover-bg: #15803d;
+  --bs-btn-hover-border-color: #15803d;
+}
+
+.nav-link.active {
+  color: var(--bs-success) !important;
+  font-weight: 600;
+}
+
+.text-success {
+  color: var(--bs-success) !important;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.testimonial-card {
+  border: 1px solid #e5e7eb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
+}
+
+.page-content {
+  display: none;
+  /* Hidden by default */
+}
+
+.plant-guide-card .card-img-top {
+  height: 150px;
+}
+
+.cart-icon-container {
+  position: relative;
+}
+
+.cart-item-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  height: 20px;
+  width: 20px;
+  background-color: var(--bs-danger);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* Product Detail Modal Styles */
+.product-thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: .375rem;
+  transition: border-color .15s ease-in-out;
+}
+
+.product-thumbnail.active,
+.product-thumbnail:hover {
+  border-color: var(--bs-success);
+}
+
+.star-rating .lucide-star {
+  color: #ffc107;
+}
+
+/* Sticky Footer & Main Site Layout */
+#main-site-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#main-site-container>main {
+  flex-grow: 1;
+}
+
+/* Farmer Dashboard Specific Styles */
+#farmer-dashboard-container {
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 48px 0 0;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.sidebar .nav-link .lucide {
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+}
+
+.sidebar .nav-link.active {
+  color: var(--bs-success) !important;
+}
+
+.dashboard-main-content {
+  margin-left: 220px;
+  padding: 2rem;
+}
+
+.dashboard-header .navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, .25);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.dashboard-page-view {
+  display: none;
+}
+
+.dashboard-page-view.active {
+  display: block;
+}
+
+.stat-card .lucide {
+  opacity: 0.3;
+}
+
+/* Responsive styles for dashboard */
+@media (max-width: 767.98px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .sidebar-sticky {
+    height: auto;
+    position: relative;
+  }
+
+  .dashboard-main-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .dashboard-header .navbar-toggler {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1021;
+    /* Above sidebar */
+  }
+}
