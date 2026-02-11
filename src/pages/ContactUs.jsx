@@ -19,7 +19,7 @@ const ContactUsPage = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/contact", form);
+      await axios.post("https://organicroots-backend.vercel.app/api/contact", form);
 
       setStatus("Message sent successfully!");
       setForm({ name: "", email: "", subject: "", message: "" });

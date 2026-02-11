@@ -15,7 +15,7 @@ const Home = () => {
   useEffect(() => {
     const fetchModules = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/learning-modules?limit=3");
+        const res = await fetch("https://organicroots-backend.vercel.app/api/learning-modules?limit=3");
         const data = await res.json();
         setModules(data.slice(0, 3)); // limit to 3 featured modules
       } catch (err) {
@@ -29,7 +29,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/products");
+        const res = await fetch("https://organicroots-backend.vercel.app/api/products");
         const data = await res.json();
         setProducts(data.slice(0, 3)); // show top 3 products
       } catch (err) {

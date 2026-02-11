@@ -6,7 +6,7 @@ const Schemes = () => {
   const [schemes, setSchemes] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/schemes")
+    fetch("https://organicroots-backend.vercel.app/api/schemes")
       .then((res) => res.json())
       .then((data) => setSchemes(data))
       .catch((err) => console.error("Error fetching schemes:", err));
